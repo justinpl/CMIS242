@@ -9,7 +9,7 @@ public class SuperDemo
     public static void main(String[] args)
     {
         Boat boat1 = new Boat("fred", "red");
-        SailBoat boat2 = new SailBoat("summerwind", "grey", 3);
+        SailBoat boat2 = new SailBoat();
         System.out.println(boat1.toString());
         System.out.println(boat2.toString());
     }
