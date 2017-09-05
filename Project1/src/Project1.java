@@ -22,8 +22,9 @@ public class Project1
     {
         try 
         {
+            System.out.print("Enter the file name with extension : ");
             Scanner input = new Scanner(System.in);
-            File file = new File("C:\\Users\\jluce\\Documents\\file.txt");
+            File file = new File(input.nextLine());
             input = new Scanner(file);
             //loop through file line by line
             while (input.hasNextLine()) 
@@ -57,19 +58,25 @@ public class Project1
             ex.printStackTrace();
         }
         // loop through 2014 employee array and display employees
-        for (int i=0; i < COUNT14; i++)
+        if (COUNT14 > 0)
         {
-            System.out.println(ARRAY14[i]);
+            for (int i=0; i < COUNT14; i++)
+            {
+                System.out.println(ARRAY14[i]);
+            }
+            // print average salary for 2014
+            System.out.println("Average Salary 2014: " + TOTALSALARY14/COUNT14 + "\n");
         }
-        // print average salary for 2014
-        System.out.println("Average Salary 2014: " + TOTALSALARY14/COUNT14 + "\n");
         // loop through 2015 employee array and display employees
-        for (int i=0; i < COUNT15; i++)
+        if (COUNT15 > 0)
         {
-            System.out.println(ARRAY15[i]);
+            for (int i=0; i < COUNT15; i++)
+            {
+                System.out.println(ARRAY15[i]);
+            }
+            // print average salary for 2015
+            System.out.println("Average Salary 2015: " + TOTALSALARY15/COUNT15 + "\n");
         }
-        // print average salary for 2015
-        System.out.println("Average Salary 2015: " + TOTALSALARY15/COUNT15 + "\n");
     }
     //add employee to appropriate array and calculate salary
     private static void appendArray(Employee employee,String[] arrayLine)
